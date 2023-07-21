@@ -1,5 +1,11 @@
 module MATLAB
 
+# ENV["MATLAB_ROOT"]="C:\\Program Files\\MATLAB\\R2021b\\bin"
+# cd("C:\\Users\\roth0674\\Documents\\GitHub\\MATLAB.jl\\src")
+libmx_loc = "C:\\Program Files\\MATLAB\\R2021b\\bin\\win64\\libmx.dll"
+libmat_loc = "C:\\Program Files\\MATLAB\\R2021b\\bin\\win64\\libmat.dll"
+libeng_loc = "C:\\Program Files\\MATLAB\\R2021b\\bin\\win64\\libeng.dll"
+
 using Libdl
 using SparseArrays
 
@@ -81,9 +87,13 @@ function __init__()
 
     # load libraries
 
-    libmx[]  = Libdl.dlopen(joinpath(matlab_libpath, "libmx"), Libdl.RTLD_GLOBAL)
-    libmat[] = Libdl.dlopen(joinpath(matlab_libpath, "libmat"), Libdl.RTLD_GLOBAL)
-    libeng[] = Libdl.dlopen(joinpath(matlab_libpath, "libeng"), Libdl.RTLD_GLOBAL)
+    # libmx[]  = Libdl.dlopen(joinpath(matlab_libpath, "libmx"), Libdl.RTLD_GLOBAL)
+    # libmat[] = Libdl.dlopen(joinpath(matlab_libpath, "libmat"), Libdl.RTLD_GLOBAL)
+    # libeng[] = Libdl.dlopen(joinpath(matlab_libpath, "libeng"), Libdl.RTLD_GLOBAL)
+    libmx[]  = Libdl.dlopen(libmx_loc, Libdl.RTLD_GLOBAL)
+    libmat[] = Libdl.dlopen(libmat_loc, Libdl.RTLD_GLOBAL)
+    libeng[] = Libdl.dlopen(libeng_loc, Libdl.RTLD_GLOBAL)
+
 
     # engine functions
 
