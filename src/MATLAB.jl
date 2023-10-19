@@ -2,9 +2,9 @@ module MATLAB
 
 # ENV["MATLAB_ROOT"]="C:\\Program Files\\MATLAB\\R2021b\\bin"
 # cd("C:\\Users\\roth0674\\Documents\\GitHub\\MATLAB.jl\\src")
-libmx_loc = "C:\\Program Files\\MATLAB\\R2021b\\bin\\win64\\libmx.dll"
-libmat_loc = "C:\\Program Files\\MATLAB\\R2021b\\bin\\win64\\libmat.dll"
-libeng_loc = "C:\\Program Files\\MATLAB\\R2021b\\bin\\win64\\libeng.dll"
+libmx_loc = "C:\\Program Files\\MATLAB\\R2020b\\bin\\win64\\libmx.dll"
+libmat_loc = "C:\\Program Files\\MATLAB\\R2020b\\bin\\win64\\libmat.dll"
+libeng_loc = "C:\\Program Files\\MATLAB\\R2020b\\bin\\win64\\libeng.dll"
 
 using Libdl
 using SparseArrays
