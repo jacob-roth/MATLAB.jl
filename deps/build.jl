@@ -78,8 +78,8 @@ matlab_root = find_matlab_root()
 if !isnothing(matlab_root)
     matlab_libpath = find_matlab_libpath(matlab_root)
     matlab_cmd = find_matlab_cmd(matlab_root)
-    libmx_size = filesize(Libdl.dlpath(joinpath(matlab_libpath, "libmx")))
-    # libmx_size = filesize(Libdl.dlpath("C:\\Program Files\\MATLAB\\R2020b\\bin\\win64\\libmx.dll"))
+    # libmx_size = filesize(Libdl.dlpath(joinpath(matlab_libpath, "libmx")))
+    libmx_size = filesize(Libdl.dlpath("C:\\Program Files\\MATLAB\\R2020b\\bin\\win64\\libmx.dll"))
     open(depsfile, "w") do io
         println(io,
             """
