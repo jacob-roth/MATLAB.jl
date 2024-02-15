@@ -1,14 +1,11 @@
 module MATLAB
 
-<<<<<<< Updated upstream
-=======
 # ENV["MATLAB_ROOT"]="C:\\Program Files\\MATLAB\\R2020b\\bin"
 # cd("Y:\\git\\MATLAB.jl\\src")
 libmx_loc = "C:\\Program Files\\MATLAB\\R2020b\\bin\\win64\\libmx.dll"
 libmat_loc = "C:\\Program Files\\MATLAB\\R2020b\\bin\\win64\\libmat.dll"
 libeng_loc = "C:\\Program Files\\MATLAB\\R2020b\\bin\\win64\\libeng.dll"
 
->>>>>>> Stashed changes
 using Libdl
 using SparseArrays
 
